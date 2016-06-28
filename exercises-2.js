@@ -46,20 +46,24 @@ function isVowel(char) {
 
 function translate(phrase) {
     var result = phrase.split(''); //makes array of individual letters
+    // console.log(result);
+    var newPhrase;
     for (i = 0; i < result.length; i++) {
         if ((result[i] !== 'a') && (result[i] !== 'e') && (result[i] !== 'i') && (result[i] !== 'o') && (result[i] !== 'u') && (result[i] !== ' ')) {
-          var newPhrase=result[i].concat('o' + result[i]);
+            newPhrase = result[i].concat('o' + result[i]);
+          } else {
+            newPhrase = result[i];
+          }
+          // newPhrase=result[i] += (result.join());//<----- on the right track
           console.log(newPhrase);
-            // var newPhrase = (result[i].repeat(2));
+          // console.log(String(newPhrase=Array.of(result[i].concat('o' + result[i]))));
+          // console.log(newPhrase.join());
+          // console.log((Array.of(newPhrase)).join);
+          // console.log(typeof(newPhrase));
 
-            // if ((result[i] !== 'a') || (result[i] !== 'e') || (result[i] !== 'i') || (result[i] !== 'o') || (result[i] !== 'u')){
-            //   // var doubles = result[i].repeat(2);
-            //     console.log(result[i].repeat(2));
-            //
-            // }
         }
     }
-}
+
 translate('crazy like a fox');
 
 
